@@ -1,7 +1,5 @@
 package com.skilldistillery.blackjack;
 
-import com.skilldistillery.cards.common.Hand;
-
 public abstract class Player {
 	private String name;
 	private Hand hand;
