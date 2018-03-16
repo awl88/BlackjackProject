@@ -1,4 +1,4 @@
-package com.skilldistillery.blackjack;
+package com.skilldistillery.cards.common;
 
 public enum Rank {
 	TWO(2),
