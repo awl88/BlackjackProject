@@ -1,9 +1,24 @@
 package com.skilldistillery.blackjack;
 
-public class Dealer extends Player {
+import com.skilldistillery.cards.common.Card;
+import com.skilldistillery.cards.common.Deck;
 
+public class Dealer extends Player {
+	private Deck deck = new Deck();
+	
 	public Dealer(String name, Hand hand) {
 		super(name, hand);
 	}
-
+	
+	public void shuffleCards() {
+		deck.shuffle();
+	}
+	
+	public Card dealCards() {
+		Card card = deck.dealCard();
+		return card;
+		
+		
+	}
+	
 }

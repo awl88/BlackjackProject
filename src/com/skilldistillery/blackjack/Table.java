@@ -1,14 +1,11 @@
 package com.skilldistillery.blackjack;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.skilldistillery.cards.common.Card;
-import com.skilldistillery.cards.common.Deck;
 
 public class Table {
-	private Deck deck = new Deck();
-
+	
 	public static void main(String[] args) {
 		Table deal = new Table();
 		Scanner kb = new Scanner(System.in);
@@ -17,10 +14,34 @@ public class Table {
 	}
 
 	public void start(Scanner kb) {
+		// Start game & create Player
 		System.out.print("Welcome to the Blackjack table. What is your name? ");
 		String name = kb.next();
 		Hand p1Hand = new Hand();
 		Player p1 = new Gambler(name, p1Hand);
+		
+		// Create Dealer
+		Hand d1Hand = new Hand();
+		Dealer d1 = new Dealer("Dealer", d1Hand);
+		
+		// Dealer shuffles deck
+		d1.shuffleCards();
+		
+		// Dealer deals cards
+		for (int i =0; i < 2; i++) {
+			Card gamblerCard = d1.dealCards();
+			p1.addCard(gamblerCard);
+			Card dealerCard = d1.dealCards();
+			d1.addCard(dealerCard);
+			
+			System.out.println(p1.getHand());
+			System.out.println(gamblerCard + " " + dealerCard);
+			
+			
+		}
+		
+		
+		// Decide winners
 		
 		
 //		deck.shuffle();
