@@ -13,13 +13,17 @@ public class Hand {
 		
 	}
 
-	public Hand getCardsInHand() {
-		System.out.println(hand);
-		return this;
+	public List<Card> getCardsInHand() {
+		return hand;
 	}
 
 	public int getValueOfHand() {
-
-		return -1;
+		int value = 0;
+		
+		for (Card card : hand) {
+			value = value + card.getValue();
+			
+		}
+		return value;
 	}
 }

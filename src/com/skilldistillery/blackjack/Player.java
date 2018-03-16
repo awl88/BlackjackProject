@@ -1,5 +1,7 @@
 package com.skilldistillery.blackjack;
 
+import java.util.List;
+
 import com.skilldistillery.cards.common.Card;
 
 public abstract class Player {
@@ -16,6 +18,10 @@ public abstract class Player {
 		this.name = name;
 		this.hand = hand;
 	}
+	
+	public int getCardValue() {
+		return hand.getValueOfHand();
+	}
 
 
 	public String getName() {
@@ -28,8 +34,8 @@ public abstract class Player {
 	}
 
 
-	public Hand getHand() {
-		return hand;
+	public List<Card> getHand() {
+		return hand.getCardsInHand();
 	}
 
 
