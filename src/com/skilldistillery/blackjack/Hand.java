@@ -16,6 +16,11 @@ public class Hand {
 	public List<Card> getCardsInHand() {
 		return hand;
 	}
+	
+	public void clearHand() {
+		hand.clear();
+		
+	}
 
 	public int getValueOfHand() {
 		int value = 0;

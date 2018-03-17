@@ -22,6 +22,10 @@ public abstract class Player {
 	public int getCardValue() {
 		return hand.getValueOfHand();
 	}
+	
+	public void clearHand() {
+		hand.clearHand();
+	}
 
 
 	public String getName() {
