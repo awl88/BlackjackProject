@@ -7,7 +7,7 @@ import com.skilldistillery.cards.common.Card;
 public abstract class Player {
 	private String name;
 	private Hand hand;
-	private double wallet = 500;
+	private int wallet = 2500;
 
 	public void addCard(Card card) {
 		hand.addCard(card);
@@ -26,16 +26,12 @@ public abstract class Player {
 	public void clearHand() {
 		hand.clearHand();
 	}
-	
-	public void addMoney(double winnings) {
-		wallet += winnings;
-	}
 
-	public double getWallet() {
+	public int getWallet() {
 		return wallet;
 	}
 
-	public void setWallet(double wallet) {
+	public void setWallet(int wallet) {
 		this.wallet = wallet;
 	}
 
