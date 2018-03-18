@@ -12,6 +12,7 @@ public class Deck {
 	}
 
 	public List<Card> createDeck() {
+		deckOfCards.clear();
 		for (Suit s : Suit.values()) {
 			for (Rank r : Rank.values()) {
 				Card c = new Card(s, r);
@@ -20,6 +21,10 @@ public class Deck {
 
 		}
 		return deckOfCards;
+	}
+	
+	public void readdCards() {
+		
 	}
 
 	public int checkDeckSize() {
