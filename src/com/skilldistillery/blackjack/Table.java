@@ -39,10 +39,10 @@ public class Table {
 		players.add(p1);
 
 		// Start game
-		System.out.println("You walk into the casino with $500. Your goal is to win as much as you can. Good luck!");
+		System.out.println("You walk into the casino with $2,500. Your goal is to win as much as you can. Good luck!");
 		System.out.println("You find a Blackjack table and sit down.");
 		System.out.print("Dealer: \"Welcome to the Blackjack table. What is your name?\" ");
-		String name = kb.next();
+		String name = kb.next(); 
 
 		// Ask to add other players
 		System.out.print("How many other players would you like to play against? (up to 5) ");
